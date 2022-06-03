@@ -1,0 +1,29 @@
+from tkinter import *
+import random 
+
+
+root= Tk()
+root.title("Picnic bag list")
+
+root.geometry("400x400")
+root.configure(background="grey")
+
+label_list = Label(root)
+item_label = Label(root)
+
+item= ["bottle", "tiffin", "id cards", "chips", "tickets", "hanky"]
+label_list["text"] = "Listed items" + str(item)
+
+def items_bag():
+    randomItem = random.sample(range(1, 7), 1)
+    item_label["text"] = "Put item no." + str(randomItem) + "In Bag"
+
+label_list.place(relx = 0.5, rely = 0.4, anchor = CENTER)
+
+btn=Button(root, text= "Which item to put in bag ?", command=items_bag, bg="orange", fg="white")
+
+btn.place(relx = 0.5, rely = 0.5, anchor =CENTER)
+
+item_label.place(relx = 0.5, rely = 0.6, anchor =CENTER)
+
+root.mainloop()
