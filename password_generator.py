@@ -1,7 +1,6 @@
 from tkinter import *
 import random
 
-
 root=Tk()
 root.title("Password generator")
 root.geometry("400x400")
