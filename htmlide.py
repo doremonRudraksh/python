@@ -14,7 +14,7 @@ root = Tk()
 root.minsize(650,650)
 root.maxsize(650,650)
 open_img = ImageTk.PhotoImage(Image.open("open.png"))
-exit_img = ImageTk.PhotoImage(Image.open("exit.jpg"))
+exit_img = ImageTk.PhotoImage(Image.open("play.jpg"))
 save_img = ImageTk.PhotoImage(Image.open("save.png"))
 
 label_file_name = Label(root, text="File Name", fg="Blue")
@@ -56,12 +56,11 @@ def open_file():
 
 def save():
     input_name = input_file.get()
-    file = open(input_name + ".html" +"w")
+    file = open(input_name + ".html", "w")
     data = my_text.get(1.0, END)
     print(data)
     file.write(data)
-    input_file.delete()
-    input_file.delete(0, END)
+    input_file.delete(0,END)
     my_text.delete(1.0, END)
     messagebox.showinfo("Update", "Success")
 
@@ -77,7 +76,7 @@ save_button.place(relx = 0.15, rely = 0.05, anchor = CENTER)
 run_button = Button(root, image = exit_img, text = "Run File", command=run)
 run_button.place(relx = 0.23, rely = 0.05, anchor = CENTER)
 
-    
+
 
 
 root.mainloop()

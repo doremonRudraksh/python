@@ -23,7 +23,7 @@ def fibonacci():
         second_num=sum1
         sum1=first_num+second_num
         sum2 = sum2+sum1
-        label_series["text"]+= str(sum2) + " "
+        label_series["text"]+= str(sum1) + " "
         fc["text"] = "Fibonacci Sum : " + str(sum2)
 
 btn= Button(root, text="Show fibonacci series", command=fibonacci, bg="cyan")
